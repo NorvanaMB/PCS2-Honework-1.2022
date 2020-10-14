@@ -1,1 +1,9 @@
+#To measure the length of the String (len() built in collection)
+def string_length(str):
+    count = 0
+    for char in str:
+        count += 1
+    return count
+print(string_length("Bioinformatics"))
+
 
