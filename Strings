@@ -1,1 +1,14 @@
+#To swap cases of a string
+def swap_case_string(str):
+   result_str = ""   
+   for item in str:
+       if item.isupper():
+           result_str += item.lower()
+       else:
+           result_str += item.upper()           
+   return result_str
+print(swap_case_string("SapiEnZA"))
+print(swap_case_string("SWeEt"))
+print(swap_case_string("SOUER"))
 
+#
