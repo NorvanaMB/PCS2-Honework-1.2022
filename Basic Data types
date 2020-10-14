@@ -3,5 +3,8 @@ Assignments of the course Bioinformatics2 Sapienza university, under the supervi
 
 #Marticula :1906874         #Hackerranck : @Norvana
 
+#To get current datetime in local system
+from datetime import datetime
+print(datetime.now())
 
 
