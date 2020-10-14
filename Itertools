@@ -1,1 +1,6 @@
-
+#Using count()
+xs = [1,1,1,1,5,6,7,7]
+dictEx ={}
+for i in range(len(xs)):
+    dictEx[xs[i]] = xs.count(xs[i])
+print dictEx
