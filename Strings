@@ -11,4 +11,50 @@ print(swap_case_string("SapiEnZA"))
 print(swap_case_string("SWeEt"))
 print(swap_case_string("SOUER"))
 
-#
+#Alphabet Rangoli
+def print_rangoli(size):
+    # your code goes here
+    n=size
+    l1=list(map(chr,range(97,123)))
+    x= l1[n-1::-1]+l1[1:n]
+    m=len("-".join(x))
+    for i in range(1,n):
+        print("-".join(l1[n-1:n-i:-1]+l1[n-i:n]).center(m,"-"))
+        
+    for i in range(n,0,-1):
+        print("-".join(l1[n-1:n-i:-1]+l1[n-i:n]).center(m,"-"))
+        
+    
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
+  
+3#string formatting
+def print_formatted(number):
+    
+    l=len("{0:b}".format(number))  #b means binary        
+    for i in range(1,number+1):
+        print("{0:{w}d} {0:{w}o} {0:{w}X} {0:{w}b}".format(i,w=l)) 
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
+    
+ 4# Capitalize first letter of a string
+ 
+ import string
+def solve(s):
+    return string.capwords(s," ")
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
+ 
