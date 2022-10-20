@@ -1,19 +1,6 @@
-#To swap cases of a string
-def swap_case_string(str):
-   result_str = ""   
-   for item in str:
-       if item.isupper():
-           result_str += item.lower()
-       else:
-           result_str += item.upper()           
-   return result_str
-print(swap_case_string("SapiEnZA"))
-print(swap_case_string("SWeEt"))
-print(swap_case_string("SOUER"))
-
-#Alphabet Rangoli
+1#Alphabet Rangoli
 def print_rangoli(size):
-    # your code goes here
+   
     n=size
     l1=list(map(chr,range(97,123)))
     x= l1[n-1::-1]+l1[1:n]
@@ -24,13 +11,11 @@ def print_rangoli(size):
     for i in range(n,0,-1):
         print("-".join(l1[n-1:n-i:-1]+l1[n-i:n]).center(m,"-"))
         
-    
-
 if __name__ == '__main__':
     n = int(input())
     print_rangoli(n)
   
-3#string formatting
+2#String Formatting
 def print_formatted(number):
     
     l=len("{0:b}".format(number))  #b means binary        
@@ -39,13 +24,12 @@ def print_formatted(number):
 if __name__ == '__main__':
     n = int(input())
     print_formatted(n)
-    
- 4# Capitalize first letter of a string
  
+ 
+ 3# "Capitalize" first letter of a string 
  import string
 def solve(s):
     return string.capwords(s," ")
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
@@ -57,4 +41,32 @@ if __name__ == '__main__':
     fptr.write(result + '\n')
 
     fptr.close()
+    
+   
+  4#The Minion Game
+    
+    def minion_game(string):
+    vowel = 'aeiou'.upper()
+    strl = len(string)
+    kevin = sum(strl-i for i in range(strl) if string[i] in vowel)
+    stuart = strl*(strl + 1)/2 - kevin
+
+    if kevin == stuart:
+        print ('Draw')
+    elif kevin > stuart:
+        print ('Kevin %d' % kevin)
+    else:
+        print ('Stuart %d' % stuart)
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
+    
+  5# String Validators
+  if __name__ == '__main__':
+    s = input()
+    print(any(map(str.isalnum, s)))
+    print(any(map(str.isalpha, s)))
+    print(any(map(str.isdigit, s)))
+    print(any(map(str.islower, s)))
+    print(any(map(str.isupper, s)))
  
