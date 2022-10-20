@@ -1,12 +1,89 @@
-#To measure the length of the String (len() built in collection)
-def string_length(str):
-    count = 0
-    for char in str:
-        count += 1
-    return count
-print(string_length("Bioinformatics"))
+1st Assignment of Computer Science II in Bioinformatics course, Sapienza University of Rome 
+##Python : Collections
+#Hackerrank: @mohamed_1906874
 
-2#To get a leap year
+
+1# Piling Up!
+
+ANS = []
+T = int(input())
+
+for _ in range(T):
+    n = int(input())
+    sl = list(map(int, input().split()))
+
+    for _ in range(n-1):
+        if sl[0] >= sl[len(sl)-1]:
+            a = sl[0]
+            sl.pop(0)
+        elif sl[0] < sl[len(sl)-1]:
+            a = sl[len(sl)-1]
+            sl.pop(len(sl)-1)
+        else:
+            pass
+
+        if len(sl) == 1:
+            ANS.append("Yes")
+
+        if((sl[0] > a) or (sl[len(sl)-1] > a)):
+            ANS.append("No")
+            break
+
+print("\n".join(ANS))
+
+
+2#Collections.namedtuple()
+
+import collections
+
+n = int(input())
+scol = ','.join(input().split())
+Student = collections.namedtuple('Student',scol)
+
+sum = 0
+for i in range(n):
+    row = input().split()
+    student = Student(*row)
+    sum += int(student.MARKS)
+
+print(sum/n)
+
+
+3# collections.Counter()
+from collections import Counter
+numShoes = int(input())
+shoes = Counter(map(int, input().split()))
+numCust = int(input())
+
+income = 0
+
+for i in range(numCust):
+    size, price = map(int, input().split())
+    if shoes[size]: 
+        income += price
+        shoes[size] -= 1
+print(income)
+
+
+4# DefaultDict Tutorial
+
+from collections import defaultdict
+
+n, m = map(int,input().split())
+
+a = defaultdict(list)
+for i in range(1, n + 1):
+    a[input()].append(i)
+
+for i in range(1, m + 1):
+    key = input()
+    if len(a[key]) > 0:
+        print(" ".join(str(c) for c in a[key]))
+    else:
+        print(-1)
+        
+  
+  #To get a leap year
 def is_leap(year):
     leap = False
     if year%400==0:
@@ -19,5 +96,4 @@ def is_leap(year):
 
 year = int(input())
 print(is_leap(year))
-
 
