@@ -1,6 +1,31 @@
-#Using count()
-xs = [1,1,1,1,5,6,7,7]
-dictEx ={}
-for i in range(len(xs)):
-    dictEx[xs[i]] = xs.count(xs[i])
-print dictEx
+1st Assignment of Computer Science II at Bioinformatics course 
+##Python: Itertools 
+#Hackerrank :@mohamed_1906874
+
+1#itertools.combinations()
+from itertools import combinations
+
+s , n  = input().split()
+
+for i in range(1, int(n)+1):
+    for j in combinations(sorted(s), i):
+        print(''.join(j))
+      
+2# itertools.permutations()
+from itertools import permutations
+s,n = input().split()
+print(*[''.join(i) for i in permutations(sorted(s),int(n))],sep='\n')
+
+3# Compress the String!
+from itertools import groupby   #using the package itertools
+for key, group in groupby(input()):
+   print('({}, {})'.format(len(list(group)), key), end=" ")
+   
+4# itertools.combinations_with_replacement()
+from itertools import combinations_with_replacement
+
+st,n= map(str,input().split())
+n=int(n)
+m= combinations_with_replacement(sorted(st),n)
+for i in m:
+    print("".join(i))
