@@ -1,7 +1,8 @@
-# 1st Assignment PCS2.2022
+# 1st Assignment PCS2.2022 "Hackerranck"
 Assignments of the course Computer Science II, Bioinformatics, Sapienza University of Rome, under the supervision of prof. Ioannis Chatzigiannakis
 
 #Marticula :1906874         #Hackerranck : @mohamed_1906874
+
 ##Python : Basic Data types
 # List
 if __name__ == '__main__':
@@ -92,7 +93,7 @@ print(sorted(set(arr), reverse=True)[1])
     for i in range(len(runner)):
         print(runner[i])
         
-  ##Python:Strings
+  
   
 
 
