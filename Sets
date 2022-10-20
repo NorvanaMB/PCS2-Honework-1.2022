@@ -20,4 +20,30 @@ for i in storage:
 
 print(count)
 
-2#
+2#Set Mutations
+A = int(input())
+SET_A = set(map(int, input().split()))
+N = int(input())
+for _ in range(N):
+    operation = input().split()
+    new_set = set(map(int, input().split()))
+    eval('SET_A.{}({})'.format(operation[0], new_set))
+print(sum(SET_A))
+
+3# Check subset
+T = int(input())
+for _ in range(T):
+    a = input()
+    A = set(input().split())
+    b = int(input())
+    B = set(input().split())
+    print(A.issubset(B))
+    
+ 4# The Captain's Room
+ N = input()
+ROOM_LIST = input().split()
+ROOM_SET = set(ROOM_LIST)
+for ele in list(ROOM_SET):
+    ROOM_LIST.remove(ele)
+CAPTAIN_ROOM_NUM = ROOM_SET.difference(set(ROOM_LIST)).pop()
+print(CAPTAIN_ROOM_NUM)
