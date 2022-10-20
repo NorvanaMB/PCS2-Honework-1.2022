@@ -1,10 +1,99 @@
-# 1st Assignment PCS2.2020
-Assignments of the course Bioinformatics2 Sapienza university, under the supervision of prof. Ioannis Chatzigiannakis
+# 1st Assignment PCS2.2022
+Assignments of the course Computer Science II, Bioinformatics, Sapienza University of Rome, under the supervision of prof. Ioannis Chatzigiannakis
 
-#Marticula :1906874         #Hackerranck : @Norvana
+#Marticula :1906874         #Hackerranck : @mohamed_1906874
+##Python : Basic Data types
+# List
+if __name__ == '__main__':
+    N = int(input())
+    empty = []
+    conv = []
 
-#To get current datetime in local system
-from datetime import datetime
-print(datetime.now())
+    for i in range(N):
+        x = input().split()
+        empty.append(x)
+
+    for i in range(len(empty)):
+        if empty[i][0] == 'insert':
+            x = int(empty[i][1])
+            y = int(empty[i][2])
+            conv.insert(x,y)
+        elif empty[i][0] == 'print':
+            print(conv)
+        elif empty[i][0] == 'remove':
+            conv.remove(int(empty[i][1]))
+        elif empty[i][0] == 'append':
+            conv.append(int(empty[i][1]))
+        elif empty[i][0] == 'sort':
+            conv.sort()
+        elif empty[i][0] == 'pop':
+            conv.pop()
+        elif empty[i][0] == 'reverse':
+            conv.reverse()
+            
+   #Finding the percentage
+   if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    if query_name in student_marks:
+        x = ((float(student_marks[query_name][0]) + float(student_marks[query_name][1]) + float(student_marks[query_name][2])) / 3)
+    
+    print('%.2f' % x)
+    
+    #List Comprehensions
+    if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    c = int(input())
+    d = int(input())
+    
+x = a
+y = b
+z = c
+n = d
+list1 = [x, y, z]
+
+list2 = [[i, j, k] for i in range(x + 1) for j in range(y + 1) for k in range(z + 1)]
+list3 = [i for i in list2 if sum(i) != n]
+print(list3)
+
+    #Find the Runner-Up Score!
+    if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+print(sorted(set(arr), reverse=True)[1])
+
+   # Nested lists
+   if __name__ == '__main__':
+    students = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        students.append([name,score]) 
+    x = 99999
+    for i in range(len(students)):
+        if x > float(students[i][1]):
+            x = float(students[i][1])
+    y = 999999
+    for i in range(len(students)):
+        if float(students[i][1]) > float(x) and y > float(students[i][1]):
+            y = float(students[i][1])
+    runner = []
+    for i in range(len(students)):
+        if float(students[i][1]) == float(y):
+            runner.append(students[i][0])
+    runner = sorted(runner)
+
+    for i in range(len(runner)):
+        print(runner[i])
+        
+  ##Python:Strings
+  
+
 
 
