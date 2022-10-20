@@ -1,1 +1,21 @@
+1# Mod Divmod
+n1, n2 = (int(input()) for _ in range(2))
+num = divmod(n1, n2)
+print(num[0])
+print(num[1])
+print(num)
 
+2#Polar Coordinates
+import cmath     #provides access to mathematical functions for complex numbers.
+n = input()
+print(abs(complex(n)))
+print(cmath.phase(complex(n)))
+
+3#Triangle Quest
+for i in range(1,int(input())): #More than 2 lines will result in 0 score. Do not leave a blank line also
+    print(int(i * 10**i / 9))
+    
+4#Triangle Quest 2
+for i in range(1,int(input())+1): #More than 2 lines will result in 0 score. Do not leave a blank line also
+    print (((10 ** i) // 9) ** 2)
+    
